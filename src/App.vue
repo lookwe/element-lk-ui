@@ -1,14 +1,19 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png" />
-        
+        <lkButtom />
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import lkButtom from "../package/button/src/button.vue";
 
-@Component
+@Component({
+    components: {
+        lkButtom,
+    },
+})
 export default class App extends Vue {}
 </script>
 

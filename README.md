@@ -59,13 +59,13 @@ Element-lk UI 的成长离不开大家的支持，如果你愿意为 Element-lk 
 * `alert`
 
 ## 插件样式改造
-* 颜色
+* **`颜色`**
 ![颜色](./docs/images/color.png)
 
-* 大小
+* **`大小`**
 ![大小](./docs/images/size.png)
 
-* 形态
+* **`形态`**
 ![形态](./docs/images/style.png)
 
 ## 安装使用
