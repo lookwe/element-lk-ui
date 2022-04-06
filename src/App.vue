@@ -13,6 +13,9 @@ import lkButtom from "../package/button/src/button.vue";
     components: {
         lkButtom,
     },
+    methods: {
+        // todo 获取全局配置
+    },
 })
 export default class App extends Vue {}
 </script>
