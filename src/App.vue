@@ -1,32 +1,38 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png" />
-        <lkButtom />
+        <lkButtom @click="onButClick">点击提交</lkButtom>
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+// Vue属性装饰器
+import { Component, Vue, Emit } from "vue-property-decorator";
 import lkButtom from "../package/button/src/button.vue";
 
 @Component({
     components: {
         lkButtom,
     },
-    methods: {
-        // todo 获取全局配置
-    },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+    @Emit("click")
+    onButClick(e: MouseEvent) {
+        return;
+    }
+}
 </script>
 
 <style lang="stylus">
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+html, body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+    font-size: inherit;
+    font-family: inherit;
 }
 </style>
