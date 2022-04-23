@@ -1,14 +1,28 @@
 <template>
-    <button class="lk-buttom" @click="onInalClick">
+    <button
+        :class="[
+            'lk-buttom',
+            {
+                'lk-btn-long': long,
+            },
+        ]"
+        @click="onInalClick"
+    >
         <slot></slot>
     </button>
 </template>
  
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class LkBotton extends Vue {
+    @Prop({
+        type: [Boolean, Number],
+        default: false,
+    })
+    readonly long!: boolean | number;
+
     onInalClick() {
         this.$emit("click");
     }
@@ -32,5 +46,9 @@ export default class LkBotton extends Vue {
     user-select: none;
     // 清除4周边轮廓颜色
     outline: none;
+}
+
+.lk-btn-long {
+    width: 100%;
 }
 </style>

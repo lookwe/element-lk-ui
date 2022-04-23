@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png" />
-        <lkButtom @click="onButClick">点击提交</lkButtom>
+        <lkButtom @click="onButClick" long>点击提交</lkButtom>
     </div>
 </template>
 
