@@ -7,7 +7,7 @@
 
 <script lang="ts">
 // Vue属性装饰器
-import { Component, Vue, Emit } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import lkButtom from "../package/button/src/button.vue";
 
 @Component({
@@ -16,9 +16,8 @@ import lkButtom from "../package/button/src/button.vue";
     },
 })
 export default class App extends Vue {
-    @Emit("click")
     onButClick(e: MouseEvent) {
-        return;
+        console.log(e);
     }
 }
 </script>

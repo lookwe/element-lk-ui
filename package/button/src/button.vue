@@ -13,18 +13,21 @@
 </template>
  
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { Vue, Component, Prop, Emit } from "vue-property-decorator";
 
 @Component
 export default class LkBotton extends Vue {
+    // 属性装饰
     @Prop({
         type: [Boolean, Number],
         default: false,
     })
     readonly long!: boolean | number;
 
-    onInalClick() {
-        this.$emit("click");
+    // 事件装饰
+    @Emit("click")
+    onInalClick(e: MouseEvent) {
+        return e;
     }
 }
 </script>
